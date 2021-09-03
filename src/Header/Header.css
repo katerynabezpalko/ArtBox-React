@@ -1,0 +1,47 @@
+.header_container{
+    height: 70px;
+    background-color: #FBF7F6;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 94px;
+}
+.navbar_left{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_item{
+    font-family: Montserrat;
+
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.navbar_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.tel_number{
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    background: #FFC1AE;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
