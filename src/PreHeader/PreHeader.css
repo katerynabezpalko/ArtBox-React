@@ -8,6 +8,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
+    border-bottom: 1px solid #C4C4C4;
 }
 
 .navbar{
@@ -17,8 +18,14 @@
 }
 
 .navbar_items{
+    position: relative;
+    display: inline-block;
+}
+
+.item_wrapper{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .arrow_img{
@@ -29,6 +36,25 @@
     margin-left: 4px;
 }
 
-.master_class_navbar{
-    /*padding-right: 129px;*/
+.hidden_menu{
+    border-radius: 0 0 15px 15px;
+    background-color: #F9F0EE;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+}
+
+.hidden_menu_hide {
+    opacity: 0;
+    transform: translateY(-120px);
+}
+
+.hidden_menu_show {
+    opacity: 1;
+    transform: translateY(11px);
+}
+
+.hidden_menu_item{
+    margin: 10px;
 }

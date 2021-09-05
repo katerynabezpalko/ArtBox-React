@@ -4,7 +4,7 @@ function Header() {
     return(
         <div className="header_container">
             <div className="navbar_left">
-                <img src="https://via.placeholder.com/114x112" alt="logo"/>
+                <img src={"logo_header.png"} alt="logo"/>
                 <div className="navbar_panel">
                     <div className="navbar_item">Главная</div>
                     <div className="navbar_item">Наборы</div>
