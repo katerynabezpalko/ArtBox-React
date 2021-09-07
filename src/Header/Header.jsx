@@ -1,10 +1,12 @@
 import './Header.css'
+import logo_header from '../img/logo_header.png'
+
 
 function Header() {
     return(
         <div className="header_container">
             <div className="navbar_left">
-                <img src={"logo_header.png"} alt="logo"/>
+                <img src={logo_header} alt="logo"/>
                 <div className="navbar_panel">
                     <div className="navbar_item">Главная</div>
                     <div className="navbar_item">Наборы</div>
