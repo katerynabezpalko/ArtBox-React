@@ -13,12 +13,16 @@ function PreHeader(){
         <div className="pre_header">
             <div className="navbar">
                 <div className="navbar_items">
-                    <div className="item">Для кого</div>
-                    <img src={"arrow_img.png"} className="arrow_img" alt="arrow"/>
+                    <div className="item_wrapper">
+                        <div className="item">Для кого</div>
+                        <img src={"arrow_img.png"} className="arrow_img" alt="arrow"/>
+                    </div>
                 </div>
                 <div className="navbar_items">
-                    <div className="item">По тематике</div>
-                    <img src={"arrow_img.png"} className="arrow_img" alt="arrow"/>
+                    <div className="item_wrapper">
+                        <div className="item">По тематике</div>
+                        <img src={"arrow_img.png"} className="arrow_img" alt="arrow"/>
+                    </div>
                 </div>
                 <div className="navbar_items">
                     <div onClick={toggleMenu} className="item_wrapper">

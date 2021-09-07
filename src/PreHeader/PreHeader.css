@@ -52,7 +52,7 @@
 
 .hidden_menu_show {
     opacity: 1;
-    transform: translateY(11px);
+    transform: translateY(8px);
 }
 
 .hidden_menu_item{

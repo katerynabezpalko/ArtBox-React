@@ -9,7 +9,8 @@ function Header() {
                     <div className="navbar_item">Главная</div>
                     <div className="navbar_item">Наборы</div>
                     <div className="navbar_item">Мастер-классы</div>
-                    <div className="navbar_item">Оплата</div>
+                    <div className="navbar_item">Оплата и доставка</div>
+                    <div className="navbar_item">Блог</div>
                 </div>
             </div>
             <div className="navbar_right">
