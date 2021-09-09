@@ -36,8 +36,6 @@ function PreHeader(){
                         <div className="hidden_menu_item" >Кулинарные</div>
                     </div>
                 </div>
-
-
             </div>
             <div className="master_class_navbar">
                 <div>Заказать мастер-класс</div>

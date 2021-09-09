@@ -69,3 +69,66 @@
     justify-content: space-between;
     text-decoration: none;
 }
+
+.master_class_part {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 50px;
+
+}
+
+
+.banner_cover{
+    z-index: 1;
+    width: 50%;
+    position: relative;
+}
+
+.banner1{
+    height: 500px;
+}
+
+.banner2{
+    height: 500px;
+    position:absolute;
+    right: 0;
+    top: 0;
+}
+
+.banner_text{
+    position: absolute;
+    padding-left: 70px;
+    top: 100px;
+}
+
+.banner_title{
+    color: #371030;
+    font-size: 44px;
+    font-weight: 900;
+}
+
+.banner_description{
+    font-size: 20px;
+    line-height: 24px;
+    color: #371030;
+    margin: 20px 0 30px;
+}
+
+.banner_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFB0BA;
+    width: 150px;
+    height: 63px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 3px #DE8E98;
+    color: #9A3C48;
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: none;
+
+}

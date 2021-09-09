@@ -1,5 +1,6 @@
-import './Header.css'
-import logo_header from '../img/logo_header.png'
+import './Header.css';
+import { Link } from "react-router-dom";
+import logo_header from '../img/logo_header.png';
 
 
 function Header() {
@@ -8,7 +9,9 @@ function Header() {
             <div className="navbar_left">
                 <img src={logo_header} alt="logo"/>
                 <div className="navbar_panel">
-                    <div className="navbar_item">Главная</div>
+                    <div className="navbar_item">
+                        <Link className="link" to={'/home'}>Главная</Link>
+                    </div>
                     <div className="navbar_item">Наборы</div>
                     <div className="navbar_item">Мастер-классы</div>
                     <div className="navbar_item">Оплата и доставка</div>
@@ -29,9 +32,8 @@ function Header() {
                     </button>
                 </div>
             </div>
-
         </div>
     )
 }
 
-export default Header
+export default Header;

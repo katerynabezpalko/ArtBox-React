@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: 0 94px;
 }
+
 .navbar_left{
     display: flex;
     justify-content: space-between;
@@ -19,6 +20,11 @@
 .navbar_item{
     font-size: 15px;
     margin-left: 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
 }
 
 .navbar_right{
@@ -42,5 +48,5 @@
     margin-right: 15px;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 1px 1px 0px 1px #E4B8AB;
+    box-shadow: 1px 1px 0 1px #E4B8AB;
 }
