@@ -1,0 +1,131 @@
+.slider_description{
+    position: absolute;
+    top:20%;
+    left: 15%;
+    color: #371030;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.slider_title{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.slider_information{
+    font-size: 20px;
+    margin: 25px 0 25px;
+
+}
+
+.slider_button{
+    width: 150px;
+    height: 63px;
+    border-radius: 80px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 3px #DE8E98;
+    color: #9A3C48;
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog{
+    padding:100px;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-column-gap: 30px;
+}
+
+.sidebar{
+    background: #FBF7F6;
+    border-radius: 15px;
+    width: 90%;
+    padding-left: 11px;
+}
+
+.sidebar_title{
+    font-size: 20px;
+    color: #371030;
+    font-weight: bold;
+    margin: 20px 0 20px 20px;
+    letter-spacing: 0.04em;
+}
+
+.label_wrapper{
+    margin-bottom:10px;
+}
+
+.label_information{
+    font-size: 16px;
+    color: #371030;
+    margin: 10px 0 10px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    margin-bottom: 30px;
+    background: #FBF7F6;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+.card_information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 20px 30px 20px;
+}
+
+.item_type{
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.item_title{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #371030;
+    margin: 5px 0 30px;
+}
+
+.price_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: #371030;
+}
+
+.button_item{
+    background: #FFB0BA;
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 2px #DE8E98;
+    color: #9A3C48;
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: none;
+    margin: auto;
+}
