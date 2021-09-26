@@ -5,8 +5,66 @@ import catalog_slider from "../img/catalog_slider.png";
 import catalog_item_img1 from "../img/catalog_item_img1.png";
 import catalog_item_img2 from "../img/catalog_item_img2.png";
 import catalog_item_img3 from "../img/catalog_item_img3.png";
+import { useState } from "react";
 
 function Catalog(){
+    const [catalogCards, setCatalogCards] = useState([
+        {
+            preview: catalog_item_img1,
+            itemType: 'Аксессуары',
+            itemTitle: 'Краска LoveArtB...',
+            price: '150₽',
+        },
+        {
+            preview: catalog_item_img2,
+            itemType: 'Флюид-Арт',
+            itemTitle: 'Единорожки',
+            price: '1500₽',
+        },
+        {
+            preview: catalog_item_img3,
+            itemType: 'Творческие наборы',
+            itemTitle: 'Бомбочки',
+            price: '750₽',
+        },
+        {
+            preview: catalog_item_img1,
+            itemType: 'Аксессуары',
+            itemTitle: 'Краска LoveArtB...',
+            price: '150₽',
+        },
+        {
+            preview: catalog_item_img2,
+            itemType: 'Флюид-Арт',
+            itemTitle: 'Единорожки',
+            price: '1500₽',
+        },
+        {
+            preview: catalog_item_img3,
+            itemType: 'Творческие наборы',
+            itemTitle: 'Бомбочки',
+            price: '750₽',
+        },
+    ])
+
+    const selectFilter = function (event) {
+        if(event.target.id === "creatorKit"){
+            const filteredCatalogCards = catalogCards.filter(function (item) {
+                return item.itemType === "Творческие наборы"
+            })
+            setCatalogCards(filteredCatalogCards)
+        } else if(event.target.id === "art"){
+            const filteredCatalogCards = catalogCards.filter(function (item) {
+                return item.itemType === "Флюид-Арт"
+            })
+            setCatalogCards(filteredCatalogCards)
+        } else if(event.target.id === "accessories"){
+            const filteredCatalogCards = catalogCards.filter(function (item) {
+                return item.itemType === 'Аксессуары'
+            })
+            setCatalogCards(filteredCatalogCards)
+        }
+    }
 
     return(
         <>
@@ -33,14 +91,19 @@ function Catalog(){
                 <div className="sidebar">
 
                     <div className="sidebar_title">Категории</div>
-                        <div className="label_wrapper">
-                            <input type="checkbox"/>
-                            <label className="label_information">Наборы для творчества</label>
-                        </div>
-                        <div className="label_wrapper">
-                            <input type="checkbox"/>
-                            <label className="label_information">Аксессуары для творчества</label>
-                        </div>
+
+                    <div className="label_wrapper">
+                        <input id={"creatorKit"} type="checkbox" onChange={selectFilter}/>
+                        <label className="label_information">Наборы для творчества</label>
+                    </div>
+                    <div className="label_wrapper">
+                        <input id={"art"} type="checkbox" onChange={selectFilter}/>
+                        <label className="label_information">Флюид-Арт</label>
+                    </div>
+                    <div className="label_wrapper">
+                        <input id={"accessories"} type="checkbox" onChange={selectFilter}/>
+                        <label className="label_information">Аксессуары для творчества</label>
+                    </div>
 
                     <div className="sidebar_title">По направлению</div>
                         <div className="label_wrapper">
@@ -63,57 +126,23 @@ function Catalog(){
                 </div>
 
                 <div className="cards">
-                    <div className="card">
-                        <img src={catalog_item_img1} alt="item1"/>
-                        <div className="card_information">
-                            <div className="item_type">Аксессуары</div>
-                            <div className="price_wrapper">
-                                <div className="item_title">Краска LoveArtB...</div>
-                                <div className="price">150₽</div>
-                            </div>
-                            <button className="button_item">В корзину</button>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={catalog_item_img2} alt="item1"/>
-                        <div className="card_information">
-                            <div className="item_type">Аксессуары</div>
-                            <div className="item_title">Краска LoveArtB...</div>
-                            <button className="button_item">В корзину</button>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={catalog_item_img3} alt="item1"/>
-                        <div className="card_information">
-                            <div className="item_type">Аксессуары</div>
-                            <div className="item_title">Краска LoveArtB...</div>
-                            <button className="button_item">В корзину</button>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={catalog_item_img1} alt="item1"/>
-                        <div className="card_information">
-                            <div className="item_type">Аксессуары</div>
-                            <div className="item_title">Краска LoveArtB...</div>
-                            <button className="button_item">В корзину</button>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={catalog_item_img2} alt="item1"/>
-                        <div className="card_information">
-                            <div className="item_type">Аксессуары</div>
-                            <div className="item_title">Краска LoveArtB...</div>
-                            <button className="button_item">В корзину</button>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={catalog_item_img3} alt="item1"/>
-                        <div className="card_information">
-                            <div className="item_type">Аксессуары</div>
-                            <div className="item_title">Краска LoveArtB...</div>
-                            <button className="button_item">В корзину</button>
-                        </div>
-                    </div>
+                    {
+                        catalogCards.map((item,index) => {
+                            return(
+                                <div key={index} className="card">
+                                    <img src={item.preview} alt="item1"/>
+                                    <div className="card_information">
+                                        <div className="item_type">{item.itemType}</div>
+                                        <div className="price_wrapper">
+                                            <div className="item_title">{item.itemTitle}</div>
+                                            <div className="price">{item.price}</div>
+                                        </div>
+                                        <button className="button_item">В корзину</button>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
 
